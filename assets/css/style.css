@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* NAVBAR */
+nav {
+    background-color: #804e25;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav img {
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #333;
+}
+
+/* HERO */
+.hero {
+    background: url('https://images.unsplash.com/photo-1615874959474-d609a50c2d5b') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero img {
+    max-width: 180px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* PRODUTOS */
+.produtos {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.card-info h3 {
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #8B4513;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.hero {
+    background: url('../imagens/4.png') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centraliza verticalmente */
+    align-items: center;     /* centraliza horizontalmente */
+    text-align: center;
+    color: #fff;
+    position: relative;
+    padding: 0 20px;
+}
+
+/* Overlay opcional */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.hero img.hero-logo {
+    width: 100%;        /* ocupa toda a largura da tela */
+    height: auto;       /* mantém proporção */
+    max-height: 200px;  /* opcional: limita altura para não ficar gigante */
+    position: relative;
+    z-index: 1;         /* acima do overlay */
+}
+
+.hero h1, .hero p {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #8B4513;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #a0522d;
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366; /* verde WhatsApp */
+    color: #fff;
+    border-radius: 50px; /* cantos arredondados */
+    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* espaço entre ícone e texto */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    z-index: 1000;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.05);           /* leve aumento */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* sombra mais intensa */
+    background: #20b857;              /* verde ligeiramente mais escuro */
+}
+
+/* Responsivo: reduz tamanho em telas pequenas */
+@media (max-width: 480px) {
+    .whatsapp-btn {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+}
+
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);          /* leve aumento */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* sombra mais intensa */
+    background: #20b857;            /* verde ligeiramente mais escuro */
+}
+
+
+.footer {
+    background-color: #8B4513; /* marrom elegante e chamativo */
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    width: 150px;
+    height: auto;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fff9f0;
+    transform: scale(1.1); /* efeito sutil ao passar o mouse */
+}
+
+.footer-copy {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #f0e6dc;
+}
